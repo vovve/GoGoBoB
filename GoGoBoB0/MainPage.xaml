@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoGoBoB0.MainPage"
+             Title="GoGoBoB"
+             BackgroundImage="GoGoBoB.png">
+    <ContentPage.Content>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        <Button Text="Krisinformation"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Grid.Row="0"
+               Grid.Column="1"
+               BackgroundColor="LightGreen"
+               Opacity="0.5"
+               x:Name="Krisinformation"
+               Clicked="Krisinformation_Clicked"/>
+        <Button Text="Länkar"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Grid.Row="0"
+               Grid.Column="0"
+               BackgroundColor="#ede890"    
+               Opacity="0.5"
+               x:Name="Links"
+               Clicked="Links_Clicked"/>
+        <Button Text="Packa en BugOutBag"
+               TextColor="White"
+               FontSize="30"
+               FontAttributes="Bold"
+               Grid.Row="1"
+               Grid.Column="0"
+               BackgroundColor="SlateGray"
+               Grid.ColumnSpan="2"
+               Opacity="0.7"
+               x:Name="PackaenBOB"
+               Clicked="PackaenBOB_Clicked"/>
+        <Label Text="Kontakt"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Grid.Row="2"
+               Grid.Column="0"
+               BackgroundColor="LightGreen"
+               Opacity="0.5"
+               x:Name="Kontakt" />
+        <Button Text="Min checklista"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Grid.Row="2"
+               Grid.Column="1"
+               BackgroundColor="#ede890"
+               Opacity="0.5"
+               x:Name="Minchecklista"
+               Clicked="Minchecklista_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
