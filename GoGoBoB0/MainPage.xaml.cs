@@ -36,5 +36,10 @@ namespace GoGoBoB0
         {
             await this.Navigation.PushAsync(new Links());
         }
+
+        async void Kontakt_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await this.Navigation.PushAsync(new Kontakt());
+        }
     }
 }

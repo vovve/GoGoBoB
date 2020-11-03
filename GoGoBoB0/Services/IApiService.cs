@@ -5,6 +5,7 @@ namespace GoGoBoB0.Services
 
     public interface IApiService
     {
-        Task<string[]> Get();
+        Task<Root> GetKrisFeed();
+        Task<string> Get(string url);
     }
 }

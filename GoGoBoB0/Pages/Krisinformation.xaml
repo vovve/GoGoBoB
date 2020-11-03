@@ -4,16 +4,17 @@
              x:Class="GoGoBoB0.Krisinformation"
              Title="Krisinformation">
 
-    <ListView x:Name="krisTemanListView"
+    <ListView x:Name="krisFeedListView"
               VerticalOptions="FillAndExpand"
-              ItemsSource="{Binding KrisTema}">
+              HasUnevenRows="True"
+              ItemsSource="{Binding KrisFeed}">
 
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ImageCell Text="{Binding Title}"
-                           Detail="{Binding Text}"
-                           ImageSource="{Binding ImageUrl}">                   
-                </ImageCell>
+                <TextCell Text="{Binding Title}"
+                          Detail="{Binding Summary}"
+                          Height="100">                   
+                </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

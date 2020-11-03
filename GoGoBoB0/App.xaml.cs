@@ -25,7 +25,7 @@ namespace GoGoBoB0
         public App()
         {
             InitializeComponent();
-
+            RegisterServices();
             MainPage = new NavigationPage(new MainPage());
         }
 

@@ -11,19 +11,11 @@
            TextColor="Black"
            FontSize="20"
            FontAttributes="Bold"
-           Text="Var förberedd om krisen kommer! Här finns mer information."
+           Text="Var förberedd om krisen kommer!&#x0a;Här finns mer information."
            LineBreakMode="WordWrap" />
-        <!--<Label.FormattedText x:Name="PrepperLabel">
-            <FormattedString>
-                <Span Text="Prepparen.se"
-                  TextColor="Blue"
-                  TextDecorations="Underline">
-                    <Span.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ClickCommand}"
-                                          CommandParameter="https://www.prepparen.se" />
-                    </Span.GestureRecognizers>
-                </Span>
-            </FormattedString>
-        </Label.FormattedText>-->
+        <WebView Source="https://www.prepparen.se"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+        </WebView>
     </StackLayout>
 </ContentPage>

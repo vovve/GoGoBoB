@@ -17,44 +17,37 @@ namespace GoGoBoB0
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Krisinformation : ContentPage
     {
-        public ApiService apiService;
+        public IApiService apiService;
 
-        public ObservableCollection<string> KrisTema { get; } = new ObservableCollection<string>();
+        public ObservableCollection<Services.Entry> KrisFeed { get; } = new ObservableCollection<Services.Entry>();
+
         public ICommand LoadCommand { get; }
 
         public Krisinformation()
         {
             InitializeComponent();
+            apiService = DependencyService.Get<IApiService>();
             LoadCommand = new Command(async () => await Load());
-            krisTemanListView.ItemsSource = KrisTema;
+            krisFeedListView.ItemsSource = KrisFeed;
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await Load();
         }
 
         public async Task Load()
         {
-            var krisTema = await apiService.Get();
+            KrisFeed.Clear();
 
-            //foreach (var KrisTema in krisTema)
-            //{
-            //    KrisTema.Add();
-            //}
+            var root = await apiService.GetKrisFeed();           
+
+            foreach (var item in root.Entries)
+            {
+                KrisFeed.Add(item);
+            }
         }
     }
-
-    public class KrisTema
-    {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public string Text { get; set; }
-        public string ImageUrl { get; set; }
-        public string LinkUrl { get; set; }
-    }
-
-    //public class Krisfeed
-    //{
-    //    public int ID { get; set; }
-    //    public string Title { get; set; }
-    //    public string Summary { get; set; }
-    //    public string LinkUrl { get; set; }
-    //}
 }
 
