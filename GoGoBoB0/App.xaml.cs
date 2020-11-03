@@ -2,7 +2,7 @@
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-//using GoGoBoB0.Services;
+using GoGoBoB0.Services;
 
 namespace GoGoBoB0
 {
@@ -29,10 +29,10 @@ namespace GoGoBoB0
             MainPage = new NavigationPage(new MainPage());
         }
 
-        //private static void RegisterServices()
-        //{
-        //    DependencyService.Register<IApiService, ApiService>();
-        //}
+        private static void RegisterServices()
+        {
+            DependencyService.Register<IApiService, ApiService>();
+        }
 
 
         protected override void OnStart()
