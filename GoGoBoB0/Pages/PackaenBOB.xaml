@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoGoBoB0.Pages.PackaenBOB"
+             Title="Packa en BugOutBag">
+<StackLayout Margin="5"
+             Orientation="Vertical"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+    <Label x:Name="titleLabel"
+           TextColor="Black"
+           FontSize="24"
+           FontAttributes="Bold"
+           Text="BUG OUT BAG (BOB)&#x0a; – Väskan som preppern alltid har färdigpackad"
+           LineBreakMode="WordWrap" />
+    <Label x:Name="IngressLabel"
+           TextColor="Black"
+           FontSize="18"
+           FontAttributes="None"
+           Text="En BOB ska man lätt kunna ta med sig, så tänk på att packa i en praktisk ryggsäck, du vill inte behöva släpa runt på en otymplig resväska när krisen kommer."
+           LineBreakMode="WordWrap" />
+    <Label x:Name="valueLabel"
+           FontSize="16"
+           Text="
+→   Vattenflaskor, gärna fyllda (men tänk på att du ska orka bära din packning!)&#x0a;
+→   Vattenfilter eller vattenreningstabletter&#x0a;
+→   Mat som klarar rumstemperatur&#x0a;
+→   Sötsaker som ger energi&#x0a;
+→   Trangiakök&#x0a;
+→   Elddon (tändstickor, tändstål, bomull eller tampong, som är utmärkt att tända eld med)&#x0a;
+→   Sovsäck&#x0a;
+→   Liggunderlag&#x0a;
+→   Tält&#x0a;
+→   Ficklampa med batteri&#x0a;
+→   Vevradio&#x0a;
+→   Hygienutrustning (smittor sprids snabbt vid nödsituationer)&#x0a;
+→   Värktabletter&#x0a;
+→   Rejäl kniv, gärna sågtandad"
+           LineBreakMode="WordWrap" />
+</StackLayout>
+
+</ContentPage>

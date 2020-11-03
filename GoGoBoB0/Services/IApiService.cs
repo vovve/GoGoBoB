@@ -1,10 +1,10 @@
-﻿//using System;
-//using System.Threading.Tasks;
-//namespace GoGoBoB0.Services
-//{
+﻿using System;
+using System.Threading.Tasks;
+namespace GoGoBoB0.Services
+{
 
-//    public interface IApiService
-//    {
-//        Task<string[]> Get();
-//    }
-//}
+    public interface IApiService
+    {
+        Task<string[]> Get();
+    }
+}
